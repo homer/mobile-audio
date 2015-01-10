@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+angular.module('mobileAudioApp', ['ionic','ngTouch'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -16,4 +16,19 @@ angular.module('starter', ['ionic'])
       StatusBar.styleDefault();
     }
   });
+})
+.controller("AppController",function($scope){
+  var tada = new Audio();
+  tada.src = "media/TaDa.mp3";
+
+  $scope.heading = "My Audio App";
+
+  $scope.playSound = function(){
+    console.log("Play Sound!");
+    tada.play();
+  }
+
+  $scope.swiped = function(){
+    console.log("Hello World");
+  }
 })
