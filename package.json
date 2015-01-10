@@ -1,7 +1,7 @@
 {
-  "name": "mobileaudio",
+  "name": "mobil2",
   "version": "1.0.0",
-  "description": "mobileaudio: An Ionic project",
+  "description": "mobil2: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",
