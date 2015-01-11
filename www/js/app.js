@@ -36,10 +36,13 @@ angular.module('mobileAudioApp', ['ionic','ngTouch'])
 .directive('ngTap',function(){
   return {
     link: function(scope, element, attrs) {
-      element.bind('touchstart',function(e){
+      $(element).on('touchstart',function(e){
+        console.log("Touchstart Event Fired from jQuery");
+      })
+/*      element.bind('touchstart',function(e){
         console.log("Touchstart Event Fired");
       });
-      element.bind('touchmove', function(e) {
+*/      element.bind('touchmove', function(e) {
         // console.log("Touchmove Event Fired",e.targetTouches[0].clientX,e.targetTouches[0].clientY);
         console.log("Touchmove Event Fired",e);
       });
