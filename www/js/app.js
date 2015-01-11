@@ -32,3 +32,20 @@ angular.module('mobileAudioApp', ['ionic','ngTouch'])
     console.log("Hello World");
   }
 })
+
+.directive('ngTap',function(){
+  return {
+    link: function(scope, element, attrs) {
+      element.bind('touchstart',function(e){
+        console.log("Touchstart Event Fired");
+      });
+      element.bind('touchmove', function(e) {
+        // console.log("Touchmove Event Fired",e.targetTouches[0].clientX,e.targetTouches[0].clientY);
+        console.log("Touchmove Event Fired",e);
+      });
+      element.bind('touchend',function(e){
+        console.log("Touchend Event Fired");
+      });
+    }
+  }
+})
